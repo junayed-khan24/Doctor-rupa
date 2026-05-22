@@ -2,13 +2,15 @@
 import './App.css'
 import Banner from './Banner'
 import Footer from './Footer'
+import Navbar from './Navbar'
 import Service from './Service'
 import Servicee from './Servicee'
 
 function App() {
 
   return (
-    <div className='text-center'>
+    <div className='text-left'>
+      <Navbar></Navbar>
       <h2 className='text-7xl text-red-700 text-center'>hello world</h2>
       <Banner></Banner>
       <Servicee></Servicee>

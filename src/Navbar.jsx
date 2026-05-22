@@ -1,86 +1,82 @@
-import React, { useState } from "react";
-import { HiMenuAlt3, HiX } from "react-icons";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  const navLinks = (
-    <>
-      <li>
-        <a className="hover:text-blue-600 transition duration-300 font-medium">
-          Home
-        </a>
-      </li>
-
-      <li>
-        <a className="hover:text-blue-600 transition duration-300 font-medium">
-          Services
-        </a>
-      </li>
-
-      <li>
-        <a className="hover:text-blue-600 transition duration-300 font-medium">
-          Doctors
-        </a>
-      </li>
-
-      <li>
-        <a className="hover:text-blue-600 transition duration-300 font-medium">
-          About Us
-        </a>
-      </li>
-    </>
-  );
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   return (
-    <div className="w-full bg-base-100 shadow-sm sticky top-0 z-50">
-      <div className="navbar max-w-7xl mx-auto px-4 md:px-8 py-3">
-        
-        {/* Left Logo */}
-        <div className="navbar-start">
-          <a className="text-2xl md:text-3xl font-extrabold tracking-wide text-black">
-            MEDICARE
-          </a>
-        </div>
+    <div
+      className="navbar bg-secondary/90 backdrop-blur sticky top-0 z-50 px-4 sm:px-6 lg:px-16"
+    >
+      {/* ===== Left Logo ===== */}
+      <div
+      data-aos="fade-down"
+      className="navbar-start">
+        <a className="text-xl sm:text-2xl font-bold text-primary">
+          oxcare
+        </a>
+      </div>
 
-        {/* Desktop Menu */}
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-6 text-black">
-            {navLinks}
-          </ul>
-        </div>
+      {/* ===== Mobile Menu ===== */}
+      <div
+      data-aos="fade-in"
+      className="navbar-end lg:hidden">
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost text-xl">
+            ☰
+          </label>
 
-        {/* Right Button */}
-        <div className="navbar-end hidden lg:flex">
-          <button className="btn bg-blue-600 hover:bg-blue-700 text-white border-none px-8 rounded-xl shadow-md hover:scale-105 transition duration-300">
-            Contact
-          </button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="navbar-end lg:hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-3xl text-black"
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-white rounded-box w-52 text-gray-700 space-y-1"
           >
-            {open ? <HiX /> : <HiMenuAlt3 />}
-          </button>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Doctors</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+
+            <div className="pt-2 border-t">
+              <button className="btn btn-outline btn-sm w-full mb-2">
+                Login
+              </button>
+              <button className="btn btn-success btn-sm w-full text-white">
+                Signup
+              </button>
+            </div>
+          </ul>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <ul className="menu bg-base-100 px-6 py-4 gap-3 text-black">
-          {navLinks}
-
-          <button className="btn bg-blue-600 hover:bg-blue-700 text-white border-none mt-4 rounded-xl">
-            Contact
-          </button>
+      {/* ===== Desktop Menu ===== */}
+      <div 
+      data-aos="fade-down"
+      className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 gap-4 xl:gap-6 text-gray-700 font-medium">
+          <li><a className="hover:text-primary transition">Home</a></li>
+          <li><a className="hover:text-primary transition">About</a></li>
+          <li><a className="hover:text-primary transition">Doctors</a></li>
+          <li><a className="hover:text-primary transition">Services</a></li>
+          <li><a className="hover:text-primary transition">Contact</a></li>
         </ul>
+      </div>
+
+      {/* ===== Right Buttons ===== */}
+      <div 
+      data-aos="fade-down"
+      className="navbar-end gap-2 hidden lg:flex">
+        <button className="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4">
+          Login
+        </button>
+        <button className="btn btn-primary rounded-full text-white hover:bg-white hover:text-primary px-4">
+          Signup
+        </button>
       </div>
     </div>
   );
