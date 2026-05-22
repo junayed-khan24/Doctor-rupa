@@ -71,11 +71,9 @@ const Navbar = () => {
       <div 
       data-aos="fade-down"
       className="navbar-end gap-2 hidden lg:flex">
-        <button className="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4">
-          Login
-        </button>
-        <button className="btn btn-primary rounded-full text-white hover:bg-white hover:text-primary px-4">
-          Signup
+      
+        <button className="btn btn-primary rounded-full text-white hover:bg-white hover:text-primary px-6 md:px-8">
+           contact
         </button>
       </div>
     </div>
