@@ -1,6 +1,7 @@
 
 import './App.css'
 import Banner from './Banner'
+import Footer from './Footer'
 import Service from './Service'
 import Servicee from './Servicee'
 
@@ -12,6 +13,7 @@ function App() {
       <Banner></Banner>
       <Servicee></Servicee>
       <Service></Service>
+      <Footer></Footer>
     </div>
   )
 }
