@@ -78,72 +78,7 @@ const Servicee = () => {
           </div>
         </div>
 
-        {/* ================= Bottom Section ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-10 md:mt-36 sm:mt-20">
-
-          {/* Image */}
-          <div
-            data-aos="fade-right"
-            className="rounded-3xl overflow-hidden shadow-lg"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
-              alt="doctor"
-              className="w-full h-full object-cover hover:scale-105 transition duration-500"
-            />
-          </div>
-{/* Content */}
-<div data-aos="fade-left">
-  <h3 className="text-3xl font-bold mb-6 text-accent">
-    Why You Choose Us?
-  </h3>
-
-  <ul className="space-y-4 mb-6">
-
-    <li className="flex items-start gap-3">
-      <FaCheckCircle className="text-primary mt-1" />
-      <span className="text-gray-600">
-        Experienced and certified doctors providing trusted and professional medical care.
-      </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <FaCheckCircle className="text-primary mt-1" />
-      <span className="text-gray-600">
-        Advanced diagnostic equipment for fast, accurate, and reliable test results.
-      </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <FaCheckCircle className="text-primary mt-1" />
-      <span className="text-gray-600">
-        Personalized treatment plans designed to meet every patient’s unique health needs.
-      </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <FaCheckCircle className="text-primary mt-1" />
-      <span className="text-gray-600">
-        Friendly staff and a comfortable environment to ensure a stress-free experience.
-      </span>
-    </li>
-
-    <li className="flex items-start gap-3">
-      <FaCheckCircle className="text-primary mt-1" />
-      <span className="text-gray-600">
-        24/7 support and emergency services for immediate medical assistance anytime.
-      </span>
-    </li>
-
-  </ul>
-
-  <button className="btn btn-primary btn-sm rounded-full">
-    Learn More →
-  </button>
-</div>
-
-
-        </div>
+       
         
       </div>
     </section>

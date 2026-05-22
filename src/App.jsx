@@ -11,7 +11,6 @@ function App() {
   return (
     <div className='text-left'>
       <Navbar></Navbar>
-      <h2 className='text-7xl text-red-700 text-center'>hello world</h2>
       <Banner></Banner>
       <Servicee></Servicee>
       <Service></Service>

@@ -43,11 +43,9 @@ const Navbar = () => {
             <li><a>Contact</a></li>
 
             <div className="pt-2 border-t">
-              <button className="btn btn-outline btn-sm w-full mb-2">
-                Login
-              </button>
+             
               <button className="btn btn-success btn-sm w-full text-white">
-                Signup
+                Contact
               </button>
             </div>
           </ul>

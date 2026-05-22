@@ -68,20 +68,14 @@ const Service = () => {
               key={service.id}
               data-aos="zoom-in-up"
               data-aos-delay={index * 200}
-              className={`rounded-2xl border shadow-lg overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl ${
-                service.active
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-white text-black border-gray-200"
-              }`}
+              className={`rounded-2xl border shadow-lg overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:bg-blue-600 hover:text-white`}
             >
               
               {/* Content */}
               <div className="p-6">
                 
                 <div
-                  className={`text-4xl mb-4 ${
-                    service.active ? "text-white" : "text-blue-600"
-                  }`}
+                  className={`text-4xl mb-4 `}
                 >
                   {service.icon}
                 </div>
@@ -91,9 +85,7 @@ const Service = () => {
                 </h3>
 
                 <p
-                  className={`text-sm leading-7 ${
-                    service.active ? "text-gray-100" : "text-gray-600"
-                  }`}
+                  className={`text-sm leading-7 `}
                 >
                   {service.desc}
                 </p>
